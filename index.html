@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form id="currency-form">
+            <div class="currency">
+                <div class="currency-radios">
+                    <input name="from-curr" id="usd-from" type="radio" value="USD" checked>
+                    <label for="usd-from">USD</label>
+        
+                    <input name="from-curr" id="eur-from" type="radio" value="EUR">
+                    <label for="eur-from">EUR</label>
+        
+                    <input name="from-curr" id="azn-from" type="radio" value="AZN">
+                    <label for="azn-from">AZN</label>
+        
+                    <input name="from-curr" id="uah-from" type="radio" value="UAH">
+                    <label for="uah-from">UAH</label>
+        
+                    <input name="from-curr" id="gbp-from" type="radio" value="GBP">
+                    <label for="gbp-from">GBP</label>
+        
+                    <input name="from-curr" id="rub-from" type="radio" value="RUB">
+                    <label for="rub-from">RUB</label>
+                </div>
+    
+                <div class="currency-input">
+                    <input name="from-amount" type="number" value="1">
+
+                    <p id="from-currency-info" class="currency-info">1 USD = 1.6935 AZN</p>
+                </div>
+            </div>
+
+            <div class="currency">
+                <div class="currency-radios">
+                    <input name="to-curr" id="usd-to" type="radio" value="USD">
+                    <label for="usd-to">USD</label>
+        
+                    <input name="to-curr" id="eur-to" type="radio" value="EUR">
+                    <label for="eur-to">EUR</label>
+        
+                    <input name="to-curr" id="azn-to" type="radio" value="AZN" checked>
+                    <label for="azn-to">AZN</label>
+        
+                    <input name="to-curr" id="uah-to" type="radio" value="UAH">
+                    <label for="uah-to">UAH</label>
+        
+                    <input name="to-curr" id="gbp-to" type="radio" value="GBP">
+                    <label for="gbp-to">GBP</label>
+        
+                    <input name="to-curr" id="rub-to" type="radio" value="RUB">
+                    <label for="rub-to">RUB</label>
+                </div>
+    
+                <div class="currency-input">
+                    <input name="to-amount" type="number" readonly>
+
+                    <p id="to-currency-info" class="currency-info">1 AZN = 0.5917 USD</p>
+                </div>
+            </div>
+        </form>
+        <div class="charts">
+            <canvas id="myChartSale"></canvas>
+            <canvas id="myChartBuy"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="charts.js"></script>
+
+    <script src="https://unpkg.com/imask"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

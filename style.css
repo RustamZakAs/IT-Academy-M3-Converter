@@ -1,0 +1,100 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Hanalei+Fill&display=swap'); */
+
+:root {
+    --radio-selected: indigo;
+}
+
+body {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    /* font-family: 'Hanalei Fill', cursive; */
+    font-style: normal;
+    font-weight: 1000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e3e6eb;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 96vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container form {
+    display: flex;
+    flex-direction: row;
+}
+
+.currency {
+    margin-inline: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+input[type=radio]:checked+label {
+    background-color: var(--radio-selected);
+    color: white;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+
+.currency-radios {
+    display: flex;
+    margin-bottom: 1em;
+}
+
+.currency-radios label {
+    padding: 1em;
+    border: 1px solid gray;
+    width: 100%;
+    text-align: center;
+}
+
+.currency-radios label:nth-child(2) {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.currency-radios label:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.currency-input {
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 1.5em;
+}
+
+.currency-input input {
+    outline: none;
+    border: none;
+    font-size: xx-large;
+    padding: 0;
+}
+
+.currency-info {
+    margin-bottom: 0;
+    margin-left: .5em;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    display: none;
+}
+
+.charts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 460px;
+}
+
